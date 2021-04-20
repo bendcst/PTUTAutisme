@@ -1,0 +1,315 @@
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+p {
+  margin-left: 4px;
+}
+h3 {
+  margin-left: 5px;
+}
+iframe {
+  margin-left: 4px;
+}
+
+.hello {
+  text-align: center;
+}
+
+.image {
+  width: 25%;
+  height: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.header {
+  padding: 25px;
+  text-align: center;
+  background: #004b96;
+  color: white;
+  font-size: 15px;
+}
+
+.content {
+  padding: 20px;
+}
+
+.nobarre{
+    border:none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  border: 2px solid #333;
+}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #7ca8d4;
+}
+
+.active {
+  background-color: #004b96;
+}
+
+.btn {
+  background-color: #7ca8d4;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 12px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  margin-left: 30px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.btndec{
+  background-color: #004b96;
+  border: 1px solid white;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.btndec:hover{
+     background-color: #7ca8d4;
+  border: 1px solid white;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn3 {
+  background-color: #7ca8d4;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+label {
+  margin: 4px 10px;
+  padding: 10px 10px;
+}
+
+input[type="adresse"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="text"] {
+  width: 250px;
+  padding: 12px 20px;
+  margin: 4px 4px;
+  box-sizing: border-box;
+  border: 2px solid #7ca8d4;
+  border-radius: 4px;
+}
+
+input[type="date"] {
+  width: 250px;
+  padding: 12px 20px;
+  margin: 4px 4px;
+  box-sizing: border-box;
+  border: 2px solid #7ca8d4;
+  border-radius: 4px;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+}
+
+input:focus {
+  border: 3px solid #004b96;
+
+  transition: width 0.4s ease-in-out;
+}
+
+hr {
+  color: #004b96;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+th {
+  background-color: #7ca8d4;
+  color: white;
+}
+.oui {
+  margin-left: 4px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #004b96;
+  font-weight: bold;
+}
+
+#graph {
+  position: relative;
+  width: 660px;
+  height: 216px;
+  margin: 8px;
+  padding: 0;
+}
+
+#graph ul {
+  position: absolute;
+  top: 0;
+  left: 32px;
+  width: 600px;
+  height: 200px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#graph li {
+  position: absolute;
+  list-style: none;
+  background: lightblue;
+  width: 40px;
+  text-align: center;
+  border: 1px solid black;
+  visibility: hidden;
+}
+
+.circle-wrap {
+  margin: 50px auto;
+  width: 150px;
+  height: 150px;
+  background: #e6e2e7;
+  border-radius: 50%;
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-wrap .circle .mask {
+  clip: rect(0px, 150px, 150px, 75px);
+}
+
+.circle-wrap .circle .mask .fill {
+  clip: rect(0px, 75px, 150px, 0px);
+  background-color: red;
+}
+.circle-wrap .circle .mask.full,
+.circle-wrap .circle .fill {
+  animation: fill ease-in-out 3s;
+  transform: rotate(120deg);
+}
+
+@keyframes fill {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(120deg);
+  }
+}
+
+.circle-wrap .inside-circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #fff;
+  line-height: 130px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: absolute;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+a {
+  color: white;
+}
+
+li.blanc {
+  color: white;
+}
+.error{
+    color :red;
+    font-weight:bold;
+}
+
+a.noir{
+    color:black;
+}
+
+.connexion{
+    text-align:center;
+}
+
+#deconnexion{
+    float : right;
+}

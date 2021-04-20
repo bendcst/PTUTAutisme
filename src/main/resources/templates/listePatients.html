@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gestion Patients - AutisMono</title>
+   <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" href="../static/css/style.css"/>
+    <link rel="icon" href="AutisMono.ico" />
+  </head>
+  <body>
+      <form id="logoutForm" method="POST" th:action="@{/logout}" action="#">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+       </form>
+    <div class="header">
+        <button class="btndec" id="deconnexion" onclick="document.forms['logoutForm'].submit()"> Déconnexion </button>
+        <h1><a href="index.html">AutisMono</a></h1>
+    </div>
+
+    <ul>
+      <li><a href="/medecin/show">Données Personnelles </a></li>
+      <li class="active"><a href="/patient/showAll">Liste patients</a></li>
+    </ul>
+      <div>
+    <table>
+      <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Date de Naissance</th>
+        <th>Numéro de sécurité sociale</th>
+        <th>Numéro de Téléphone</th>
+        <th>Adresse e-mail</th>
+        <th>Adresse</th>
+        <th>Niveau de stéréotypie</th>
+      </tr>
+      <tr th:each="p: ${patients}">
+        <td th:text="${p.nom}">Nom</td>
+        <td th:text="${p.prenom}">Prenom</td>
+        <td th:text="${p.datenaissance}">Date de Naissance</td>
+        <td th:text="${p.numsecu}">Num Sécu</td>
+        <td th:text="${p.numtel}">Num Tél</td>
+        <td th:text="${p.email}">Email</td>
+        <td th:text="${p.adresse}">Adresse</td>
+        <td>Elevé</td>
+      </tr>
+    </table>
+      </div>
+  </body>
+</html>

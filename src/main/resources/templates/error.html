@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Error404 - AutisMono</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" href="../static/css/style.css" />
+</head>
+<body>
+    <div class="header">
+      <h1><a href="index.html">AutisMono</a></h1>
+    </div>
+
+    <h1 class="hello">Error404</h1>
+
+    <h2 class="hello">Une erreur s'est produite !</h2>
+    <h2 th:text="${message}">My Thymeleaf Error Page</h2>
+
+    <table>
+      <tr>
+        <td>Date</td>
+        <td th:text="${timestamp}" />
+      </tr>
+      <tr>
+        <td>Path</td>
+        <td th:text="${path}" />
+      </tr>
+      <tr>
+        <td>Error</td>
+        <td th:text="${error}" />
+      </tr>
+      <tr>
+        <td>Status</td>
+        <td th:text="${status}" />
+      </tr>
+      <tr>
+        <td>Message</td>
+        <td th:text="${message}" />
+      </tr>
+    </table>
+  </body>
+</html>
+
+    
