@@ -46,13 +46,13 @@
                 <h3 class="hello">Vous êtes administrateur</h3>
               <!--  <a href="#" th:href="@{/h2-console}">Console d'administration de la BD (JDBC URL: jdbc:h2:mem:testdb) - désactivé sur Heroku</a><br/>
                 <a href="#" th:href="@{/admin/pageAdmin}">Page réservée aux admins</a> -->
-              <button class="btn3"><a class="noir" href="#" th:href="@{/medecin/show}"> Accédez à votre page Médecin</a></button>
+              <button class="btn3"><a  href="#" th:href="@{/medecin/show}"> Accédez à votre page Médecin</a></button>
             </div>
             <!-- Pour les utilisateurs qui ont le rôle 'ROLE_USER' -->
             <div sec:authorize="hasRole('ROLE_USER')">
                 <h3 class="hello">Vous êtes un simple utilisateur !</h3>
               <!--  <a href="#" th:href="@{/user/pageUser}">Page réservée aux utilisateurs connectés</a>        --> 
-              <button class="btn3"> <a class="noir" href="#" th:href="@{/patient/show}"> Accédez à votre page Patient</a> </button>
+              <button class="btn3"> <a  href="#" th:href="@{/patient/show}"> Accédez à votre page Patient</a> </button>
             </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

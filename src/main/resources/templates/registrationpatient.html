@@ -22,7 +22,7 @@
             <form method="POST" th:object="${userForm}" th:action="@{/registrationpatient}">
                 <h2 >Créez votre compte</h2>
                 <div>
-                    <button class="btn" > <a th:href="@{/registrationmedecin}" href="registrationmedecin.html">Professionnel de Santé </a></button>  | <button class="btn" ><a th:href="@{/registrationpatient}"href="registration.html">Patient</a></button>
+                    <button class="btn" > <a th:href="@{/registrationmedecin}" href="registrationmedecin.html">Professionnel de Santé </a></button>  | <button class="btn" ><a th:href="@{/registrationpatient}"href="registrationpatient.html">Patient</a></button>
                 </div>
                 <div  th:classappend="${#fields.hasErrors('username') ? 'has-error' : ''}">
                     <input type="text" th:field="*{username}" placeholder="Identifiant"

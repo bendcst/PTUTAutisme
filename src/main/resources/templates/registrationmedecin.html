@@ -22,7 +22,7 @@
             <form method="POST" th:object="${userForm}" th:action="@{/registrationmedecin}">
                 <h2 >Créez votre compte</h2>
                 <div>
-                <button class="btn" > <a th:href="@{/registrationmedecin}" href="registrationmedecin.html">Professionnel de Santé </a></button>  | <button class="btn" ><a th:href="@{/registrationpatient}"href="registration.html">Patient</a></button>
+                <button class="btn" > <a th:href="@{/registrationmedecin}" href="registrationmedecin.html">Professionnel de Santé </a></button>  | <button class="btn" ><a th:href="@{/registrationpatient}"href="registrationpatient.html">Patient</a></button>
                 </div>
                 <div  th:classappend="${#fields.hasErrors('username') ? 'has-error' : ''}">
                     <input type="text" th:field="*{username}" placeholder="Identifiant"
@@ -60,10 +60,6 @@
                 <div  th:classappend="${#fields.hasErrors('specialite') ? 'has-error' : ''}">
                     <input type="text" th:field="*{specialite}" placeholder="Spécialité (expl : psychiatre)"/>
                     <ul class="nobarre"><li class='error' th:errors="*{specialite}">Erreur sur la spécialité</li></ul>
-                </div>
-                <div  th:classappend="${#fields.hasErrors('diplome') ? 'has-error' : ''}">
-                    <input type="text" th:field="*{diplome}" placeholder="Diplômé(1=oui 0=non)"/>
-                    <ul class="nobarre"><li class='error' th:errors="*{diplome}">Erreur sur le diplôme</li></ul>
                 </div>
                 <div  th:classappend="${#fields.hasErrors('password') ? 'has-error' : ''}">
                     <input type="password"  th:field="*{password}" placeholder="Mot de passe" />

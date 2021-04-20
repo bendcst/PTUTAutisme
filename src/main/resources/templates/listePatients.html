@@ -30,6 +30,7 @@
         <th>Numéro de Téléphone</th>
         <th>Adresse e-mail</th>
         <th>Adresse</th>
+        <th>Ville</th>
         <th>Niveau de stéréotypie</th>
       </tr>
       <tr th:each="p: ${patients}">
@@ -40,6 +41,7 @@
         <td th:text="${p.numtel}">Num Tél</td>
         <td th:text="${p.email}">Email</td>
         <td th:text="${p.adresse}">Adresse</td>
+        <td th:text="${p.ville}">Ville</td>
         <td>Elevé</td>
       </tr>
     </table>

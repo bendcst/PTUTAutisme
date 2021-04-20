@@ -41,6 +41,10 @@
                     <td th:text="${#authentication.getPrincipal().getAdresse()}"> Adresse</td> 
             </tr>
             <tr>
+                    <td>Ville</td>
+                    <td th:text="${#authentication.getPrincipal().getVille()}"> Ville </td> 
+            </tr>
+            <tr>
                 <td>Tél.</td>
                     <td th:text="${#authentication.getPrincipal().getNumtel()}">numéro</td>
             </tr>

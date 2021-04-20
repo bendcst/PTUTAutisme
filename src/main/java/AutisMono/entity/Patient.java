@@ -30,28 +30,5 @@ import lombok.*;
     
     @NonNull
     private String nommedecin;
-    
-    
-    
-    
-    
-    /*@OneToMany(mappedBy = "client")
-    @ToString.Exclude
-    private List<Transaction> achats = new LinkedList<>();
-    
-    public float budgetArt(int annee) {
-        float result=0.0f;
-        for (Transaction achat : achats)
-            if (achat.getVenduLe().getYear() == annee)
-                result += achat.getPrixVente();
-        return result;
-        // Peut s'écrire en utilisant l'API Stream 
-        // cf. https://www.baeldung.com/java-stream-filter-lambda
-        /*
-        return achats.stream()
-                .filter( achat -> achat.getVenduLe().getYear() == annee) // On filtre sur l'annee
-                .map(achat -> achat.getPrixVente()) // On garde le prix de vente
-                .reduce(0f, Float::sum); // On additionne
-       
-    }*/   
+      
 }

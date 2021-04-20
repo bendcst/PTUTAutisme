@@ -29,3 +29,25 @@ function makeGraph(container, labels) {
 window.onload = function () {
   makeGraph("graph", "labels");
 };
+
+function fcaleatoire() {
+     let codeHTML = "";
+     let BPM="";
+     for (let i = 0; i < 10; i++) {
+         BPM="";
+         let fcAl = Math.round(170 * Math.random() + 50);
+         codeHTML += "<tr><td>" + fcAl + "</td></tr>";
+         BPM+= " "+ fcAl + " ";
+  }
+  document.getElementById("bpm").innerHTML = BPM;
+  document.getElementById("tabfc").innerHTML = codeHTML;
+ 
+        if (BPM >= 200) {
+
+            alert("Votre fréquence cardiaque est trop élevée vous faites peut être une crise stéréotypée");
+        }
+        if (BPM <= 60) {
+            alert("Attention votre fréquence cardiaque est trop basse ");
+        }
+ }
+fcaleatoire();
