@@ -7,9 +7,5 @@ import AutisMono.entity.Medecin;
 // This will be AUTO IMPLEMENTED by Spring 
 
 public interface MedecinRepository extends JpaRepository<Medecin, Integer> {
-
- 
-
-
-
+       Medecin findByNom(String nom);
 }

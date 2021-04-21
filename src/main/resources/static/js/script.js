@@ -50,4 +50,5 @@ function fcaleatoire() {
             alert("Attention votre fréquence cardiaque est trop basse ");
         }
  }
+
 fcaleatoire();

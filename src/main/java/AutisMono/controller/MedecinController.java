@@ -14,6 +14,9 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import AutisMono.dao.MedecinRepository;
+import AutisMono.dao.PatientRepository;
+import AutisMono.entity.Patient;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 
 /**
  * Edition des catégories, sans gestion des erreurs
@@ -105,9 +108,9 @@ public class MedecinController {
         return "redirect:show"; // on se redirige vers l'affichage de la liste
     }
     
-    @GetMapping(path = "showAll")
-    public String afficheLesMedecins(Model model) {
-        model.addAttribute("medecin", dao.findAll());
+   @GetMapping(path = "showAll")
+    public String afficheLesMedecins(@AuthenticationPrincipal Patient patient, Model model) {
+        model.addAttribute("medecin",dao.findByNom(patient.getNommedecin()));
         return "contact";
     }
 }

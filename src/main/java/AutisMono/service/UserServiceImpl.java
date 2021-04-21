@@ -7,8 +7,6 @@ import AutisMono.entity.Medecin;
 import AutisMono.entity.Patient;
 import AutisMono.entity.Role;
 import AutisMono.entity.Utilisateur;
-import java.time.LocalDate;
-import java.util.Date;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -102,6 +100,7 @@ public class UserServiceImpl implements UserService {
     public Utilisateur findByUserName(String username) {
         return userRepository.findByUsername(username);
     }
+    
 
     @Override
     public void initializeRolesAndAdmin() {
