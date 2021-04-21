@@ -1,3 +1,5 @@
+/* global google */
+
 function makeGraph(container, labels) {
   container = document.getElementById(container);
   labels = document.getElementById(labels);
@@ -30,25 +32,54 @@ window.onload = function () {
   makeGraph("graph", "labels");
 };
 
-function fcaleatoire() {
-     let codeHTML = "";
-     let BPM="";
-     for (let i = 0; i < 10; i++) {
-         BPM="";
-         let fcAl = Math.round(170 * Math.random() + 50);
-         codeHTML += "<tr><td>" + fcAl + "</td></tr>";
-         BPM+= " "+ fcAl + " ";
-  }
-  document.getElementById("bpm").innerHTML = BPM;
-  document.getElementById("tabfc").innerHTML = codeHTML;
- 
-        if (BPM >= 200) {
+
+google.charts.load('current', {packages: ['corechart', 'line']});
+google.charts.setOnLoadCallback(drawTrendlines);
+
+function drawTrendlines() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'X');
+      data.addColumn('number', 'Fréquence cardiaque');
+      data.addColumn('number', 'Limite basse');
+      data.addColumn('number', 'Limite haute');
+      let BPM="";
+      for (let i=0;i<61;i++){
+          BPM="";
+          let fcAl = Math.round(170 * Math.random() + 50);
+          data.addRows([[i, fcAl, 50, 220]]);
+          BPM+= " "+ fcAl + " ";
+      }
+      document.getElementById("bpm").innerHTML = BPM;
+      if (BPM >= 200) {
 
             alert("Votre fréquence cardiaque est trop élevée vous faites peut être une crise stéréotypée");
         }
         if (BPM <= 60) {
             alert("Attention votre fréquence cardiaque est trop basse ");
         }
- }
 
-fcaleatoire();
+      var options = {
+        hAxis: {
+          title: 'Temps en s'
+        },
+        vAxis: {
+          title: 'Rythme cardiaque en bpm'
+        },
+        colors:['#004b96', '#7ca8d4', '#7ca8d4'],
+        series: { 
+        	0: {
+            lineWidth: 3,
+          },
+        	1: {
+            lineWidth: 1,
+          },
+          2: {
+            lineWidth: 2,
+          }
+         
+        }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
