@@ -39,8 +39,7 @@ public class UserServiceImpl implements UserService {
     private String medecin1Numrpps;
     @Value("${medecin1.specialite}")
     private String medecin1Specialite;
-    @Value("${medecin1.diplome}")
-    private Integer medecin1Diplome;
+
     
     //Les infos du patient 1  sont définis dans 'application.properties')
     @Value("${patient1.username}")
@@ -110,7 +109,7 @@ public class UserServiceImpl implements UserService {
             Role roleUser = new Role("ROLE_USER");
             roleRepository.save(roleAdmin);
             roleRepository.save(roleUser);
-            Medecin firstAdmin = new Medecin(medecin1Username, medecin1Password, medecin1Nom,medecin1Prenom,medecin1Adresse, medecin1Ville,medecin1Email,medecin1Numtel,medecin1Numrpps,medecin1Specialite,medecin1Diplome);
+            Medecin firstAdmin = new Medecin(medecin1Username, medecin1Password, medecin1Nom,medecin1Prenom,medecin1Adresse, medecin1Ville,medecin1Email,medecin1Numtel,medecin1Numrpps,medecin1Specialite);
             // On crypte le mot de passe avant de l'enregistrer
             firstAdmin.setPassword(bCryptPasswordEncoder.encode(firstAdmin.getPassword()));
             firstAdmin.getRoles().add(roleAdmin);

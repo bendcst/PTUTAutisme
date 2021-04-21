@@ -23,32 +23,14 @@ public class Medecin extends Utilisateur {
     private String numrpps;
     @NonNull
     private String specialite;
-    @NonNull
-    private Integer diplome;
 
-    public Medecin(String username, String password, String nom, String prenom, String adresse, String ville, String email, String numtel, String numrpps, String specialite, Integer diplome) {
+
+    public Medecin(String username, String password, String nom, String prenom, String adresse, String ville, String email, String numtel, String numrpps, String specialite) {
         super(username, password, nom, prenom, adresse, ville, email, numtel);
         this.numrpps = numrpps;
         this.specialite = specialite;
-        this.diplome = diplome;
-    }
-
-    public int Notif(int fc) {
-
-        if ((fc < 200) && (fc > 60)) {
-
-            System.out.println("La fréquence cardiaque est: " + fc);
-        }
-        if (fc >= 200) {
-
-            System.out.println("Envoyer une alerte au medecin car fr>200: " + fc);
-        }
-        if (fc <= 60) {
-
-            System.out.println("Envoyer une alerte au medecin car fr<60: " + fc);
-        }
-
-        return fc;
 
     }
 }
+
+

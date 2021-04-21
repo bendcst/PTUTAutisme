@@ -64,18 +64,9 @@
                     <td>Numéro de sécurité sociale</td>
                     <td th:text="${#authentication.getPrincipal().getNumsecu()}">Numéro sécu</td>
                 </tr>
-               
-
             </table>
         </div>
-        <hr/>
-        <!--/* On appelle l'URL 'add' du contôleur */-->
-        <a class="noir" th:href="@{add}" href='formulairePatient.html'>Ajouter ou modifier une donnée</a>
-        <!--/* On affiche un éventuel message d'erreur */-->
-        <h3 th:text="${message}">Message de succès ou d'erreur</h3>
-        <hr/>
-        <!--  <a th:href="@{/}" href="../static/index.html">Retour au menu</a>
-          <hr/> -->
+        
 
     </body>
 </html>
