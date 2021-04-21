@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import AutisMono.dao.PatientRepository;
+import AutisMono.entity.Medecin;
 import AutisMono.entity.Patient;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -37,7 +39,7 @@ public class PatientController {
     }
     
     @GetMapping(path = "showAll")
-    public String afficheToutesLesPatients(Model model) {
+    public String afficheTousLesPatients(@AuthenticationPrincipal Medecin medecin, Model model) {
         model.addAttribute("patients", dao.findAll());
         return "listePatients";
     }
