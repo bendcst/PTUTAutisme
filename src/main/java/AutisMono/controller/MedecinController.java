@@ -51,11 +51,6 @@ public class MedecinController {
         return "formulaireMedecin";
     }
 
-    
-    /*@GetMapping(path = "showAll")
-    public String afficheLesPatients(Model model) {
-        return "listePatients";
-    }*/
     /**
      * Appelé par 'formulaireMedecin.html', méthode POST
      *

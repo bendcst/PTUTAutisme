@@ -23,6 +23,7 @@
       <div>
     <table>
       <tr>
+        <th>Suivi</th>  
         <th>Nom</th>
         <th>Prénom</th>
         <th>Date de Naissance</th>
@@ -34,6 +35,7 @@
         <th>Niveau de stéréotypie</th>
       </tr>
       <tr th:each="p: ${patients}">
+        <td><a href="/patient/suiviVuMed">📈</a></td>
         <td th:text="${p.nom}">Nom</td>
         <td th:text="${p.prenom}">Prenom</td>
         <td th:text="${p.datenaissance}">Date de Naissance</td>

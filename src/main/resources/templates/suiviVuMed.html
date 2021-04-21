@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Suivi - AutisMono</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" href="../static/css/style.css"/>	
+        <link rel="icon" href="AutisMono.ico" />
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+ <script src="https://www.google.com/jsapi"></script>
+  
+    </head>
+    <body>
+        <form id="logoutForm" method="POST" th:action="@{/logout}" action="#">
+         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+         </form>
+        <div class="header">
+            <button class="btndec" id="deconnexion" onclick="document.forms['logoutForm'].submit()"> Déconnexion </button>
+            <h1>AutisMono</h1>
+        </div>
+
+        <ul>
+            <li><a href="/patient/showAll">Revenir à la liste des Patients</a></li>
+            <li class="active">
+                <a href="/patient/suivi">Suivi</a></li>
+     
+        </ul>
+       <h3>
+            Suivi du nombre de stéréotypies quotidiennes (7 derniers jours)
+        </h3>
+
+        <div id="graph">
+            20<br />
+            <br />
+            <br />
+            15 <br />
+            <br />
+            <br />
+            10 <br />
+            <br />
+            <br />
+            5
+            <ul>
+                <li class = "blanc" >8:11/01:#7ca8d4</li>
+                <li class = "blanc">12:12/01:#7ca8d4</li>
+                <li class = "blanc">20:13/01:#7ca8d4</li>
+                <li class = "blanc">4:15/01:#7ca8d4</li>
+                <li class = "blanc">18:16/01:#7ca8d4</li>
+                <li class = "blanc">9:17/01:#7ca8d4</li>
+                <li class = "blanc">6:18/01:#7ca8d4</li>
+            </ul>
+        </div>
+
+        <div id="labels">Jours</div>
+        
+        <h3>
+            Rythme cardiaque du patient en fonction du temps
+        </h3>
+        
+        <table id="tabfc"></table>
+        <div id="chart_div"></div>
+        
+        <h3>
+            Rythme cardiaque en temps réel
+        </h3>
+
+        <div class="circle-wrap">
+            <div class="circle">
+
+                <div class="mask full">
+                    <div class="fill"></div>
+                </div>
+
+                <div class="mask half">
+                    <div class="fill"></div>
+                </div>
+
+                <div class="inside-circle">
+                    <div id="bpm"></div> BPM
+                </div>
+            </div>
+        </div>
+
+
+             <script th:src="@{/js/script.js}" src="../static/js/script.js"></script>
+    </body>
+</html>

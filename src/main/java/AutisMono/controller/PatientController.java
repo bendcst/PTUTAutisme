@@ -115,4 +115,8 @@ public class PatientController {
     public String montreLeSuivi(@ModelAttribute("patient") Patient patient) {
         return "suivi";
     }
+     @GetMapping(path = "suiviVuMed")
+    public String montreLeSuivi1Patient(@ModelAttribute("patient") Patient patient) {
+        return "suiviVuMed";
+    }
 }

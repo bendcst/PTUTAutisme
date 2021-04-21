@@ -26,43 +26,43 @@
                 </div>
                 <div  th:classappend="${#fields.hasErrors('username') ? 'has-error' : ''}">
                     <input type="text" th:field="*{username}" placeholder="Identifiant"
-                           autofocus="true"/>
+                           autofocus="true" required="required"/>
                     <ul class="nobarre"><li class='error' th:errors="*{username}">Erreur sur l'identifiant</li></ul>
                 </div>
                 <div  th:classappend="${#fields.hasErrors('nom') ? 'has-error' : ''}">
-                    <input type="text" th:field="*{nom}" placeholder="Nom"/>
+                    <input type="text" th:field="*{nom}" placeholder="Nom" required="required"/>
                     <ul class="nobarre"><li class='error' th:errors="*{nom}">Erreur sur le nom</li></ul>
                 </div>
                 <div  th:classappend="${#fields.hasErrors('prenom') ? 'has-error' : ''}">
-                    <input type="text" th:field="*{prenom}" placeholder="Prénom"/>
+                    <input type="text" th:field="*{prenom}" placeholder="Prénom" required="required"/>
                     <ul class="nobarre"><li class='error' th:errors="*{prenom}">Erreur sur le prénom</li></ul>
                 </div>
                 <div  th:classappend="${#fields.hasErrors('adresse') ? 'has-error' : ''}">
-                    <input type="text" th:field="*{adresse}" placeholder="Adresse"/>
+                    <input type="text" th:field="*{adresse}" placeholder="Adresse" required="required"/>
                     <ul class="nobarre"><li class='error' th:errors="*{adresse}">Erreur sur l'adresse</li></ul>
                 </div>
                 <div  th:classappend="${#fields.hasErrors('ville') ? 'has-error' : ''}">
-                    <input type="text" th:field="*{ville}" placeholder="Ville"/>
+                    <input type="text" th:field="*{ville}" placeholder="Ville" required="required"/>
                     <ul class="nobarre"><li class='error' th:errors="*{ville}">Erreur sur la ville</li></ul>
                 </div>
                 <div  th:classappend="${#fields.hasErrors('numtel') ? 'has-error' : ''}">
-                    <input type="tel" th:field="*{numtel}" placeholder="Numéro de téléphone"/>
+                    <input type="tel" th:field="*{numtel}" placeholder="Numéro de téléphone" required="required"/>
                     <ul class="nobarre"><li class='error' th:errors="*{numtel}">Erreur sur le numéro de tel</li></ul>
                 </div>
                 <div th:classappend="${#fields.hasErrors('email') ? 'has-error' : ''}">
-                    <input type="email" th:field="*{email}"  placeholder="Nom.Prenom@somewhere.com"/>
+                    <input type="email" th:field="*{email}"  placeholder="Nom.Prenom@somewhere.com" required="required"/>
                     <ul class="nobarre"><li class='error' th:errors="*{email}">Erreur sur le mail</li></ul>
                 </div>
                 <div  th:classappend="${#fields.hasErrors('numrpps') ? 'has-error' : ''}">
-                    <input type="text" th:field="*{numrpps}" placeholder="Numéro RPPS"/>
+                    <input type="text" th:field="*{numrpps}" placeholder="Numéro RPPS" required="required"/>
                     <ul class="nobarre"><li class='error' th:errors="*{numrpps}">Erreur sur le numéro RPPS</li></ul>
                 </div>
                 <div  th:classappend="${#fields.hasErrors('specialite') ? 'has-error' : ''}">
-                    <input type="text" th:field="*{specialite}" placeholder="Spécialité (expl : psychiatre)"/>
+                    <input type="text" th:field="*{specialite}" placeholder="Spécialité (expl : psychiatre)" required="required"/>
                     <ul class="nobarre"><li class='error' th:errors="*{specialite}">Erreur sur la spécialité</li></ul>
                 </div>
                 <div  th:classappend="${#fields.hasErrors('password') ? 'has-error' : ''}">
-                    <input type="password"  th:field="*{password}" placeholder="Mot de passe" />
+                    <input type="password"  th:field="*{password}" placeholder="Mot de passe" required="required" />
                     <ul class="nobarre"><li class='error' th:errors="*{password}">Erreur sur le password</li></ul>
                 </div>
                 <div th:classappend="${#fields.hasErrors('passwordConfirm') ? 'has-error' : ''}">
