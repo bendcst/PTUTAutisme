@@ -40,7 +40,7 @@ public class PatientController {
     
     @GetMapping(path = "showAll")
     public String afficheTousLesPatients(@AuthenticationPrincipal Medecin medecin, Model model) {
-        model.addAttribute("patients", dao.findAll());
+        model.addAttribute("patients", dao.findByNommedecin(medecin.getNom()));
         return "listePatients";
     }
 
