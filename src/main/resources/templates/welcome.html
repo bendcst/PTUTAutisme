@@ -40,17 +40,20 @@
             <form id="logoutForm" method="POST" th:action="@{/logout}" action="#">
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             </form>
-            <h2 class="hello">Bienvenue <span th:text="${#authentication.name}">Untel</span>  | <a class="noir" onclick="document.forms['logoutForm'].submit()">Déconnexion</a></h2>
+            <div class="header">
+      <h1>AutisMono</h1>
+    </div>
+            <h2 class="hello">Bienvenue <span th:text="${#authentication.name}">Untel</span> </h2>
             <!-- Pour les utilisateurs qui ont le rôle 'ROLE_ADMIN' -->
             <div sec:authorize="hasRole('ROLE_ADMIN')">
-                <h3 class="hello">Vous êtes administrateur</h3>
+                <h3 class="hello">Bienvenue sur AutisMono cher Médecin !</h3>
               <!--  <a href="#" th:href="@{/h2-console}">Console d'administration de la BD (JDBC URL: jdbc:h2:mem:testdb) - désactivé sur Heroku</a><br/>
                 <a href="#" th:href="@{/admin/pageAdmin}">Page réservée aux admins</a> -->
               <button class="btn3"><a  href="#" th:href="@{/medecin/show}"> Accédez à votre page Médecin</a></button>
             </div>
             <!-- Pour les utilisateurs qui ont le rôle 'ROLE_USER' -->
             <div sec:authorize="hasRole('ROLE_USER')">
-                <h3 class="hello">Vous êtes un simple utilisateur !</h3>
+                <h3 class="hello">Bienvenue sur AutisMono cher Patient !</h3>
               <!--  <a href="#" th:href="@{/user/pageUser}">Page réservée aux utilisateurs connectés</a>        --> 
               <button class="btn3"> <a  href="#" th:href="@{/patient/show}"> Accédez à votre page Patient</a> </button>
             </div>

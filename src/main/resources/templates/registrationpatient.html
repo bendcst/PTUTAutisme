@@ -7,7 +7,7 @@
         <!--<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" href="../static/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" th:href="@{/css/common.css}" href="../static/css/common.css" /> -->
         <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" href="../static/css/style.css" />
-        <link rel="icon" href="AutisMono.ico" />
+        <link rel="icon" href="favicon.ico" />
 
     </head>
 
@@ -15,11 +15,12 @@
         <div class="header">
       <h1><a href="login">AutisMono</a></h1>
     </div>
+        
+        <h2 class="hello" >Créez votre compte</h2>
       
         <div class="container">
 
             <form method="POST" th:object="${userForm}" th:action="@{/registrationpatient}">
-                <h2 >Créez votre compte</h2>
                 <div>
                     <button class="btn" > <a th:href="@{/registrationmedecin}" href="registrationmedecin.html">Médecin </a></button>  | <button class="btn" ><a th:href="@{/registrationpatient}"href="registrationpatient.html">Patient</a></button>
                 </div>
