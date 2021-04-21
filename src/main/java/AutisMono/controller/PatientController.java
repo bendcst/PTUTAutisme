@@ -28,7 +28,7 @@ public class PatientController {
      * Affiche toutes les catégories dans la base
      *
      * @param model pour transmettre les informations à la vue
-     * @return le nom de la vue à afficher ('afficheGaleries.html')
+     * @return le nom de la vue à afficher ('DonnesPatient.html')
      */
     @GetMapping(path = "show")
     public String afficheToutesLesDonnées(Model model) {
@@ -43,10 +43,10 @@ public class PatientController {
     }
 
     /**
-     * Montre le formulaire permettant d'ajouter une galerie
+     * Montre le formulaire permettant d'ajouter un patient
      *
      * @param patient initialisé par Spring, valeurs par défaut à afficher dans le formulaire
-     * @return le nom de la vue à afficher ('formulaireGalerie.html')
+     * @return le nom de la vue à afficher ('formulairePatient.html')
      */
     @GetMapping(path = "add")
     public String montreLeFormulairePourAjout(@ModelAttribute("patient") Patient patient) {
@@ -54,7 +54,7 @@ public class PatientController {
     }
 
     /**
-     * Appelé par 'formulaireGalerie.html', méthode POST
+     * Appelé par 'formulairePatient.html', méthode POST
      *
      * @param patient Une galerie initialisée avec les valeurs saisies dans le formulaire
      * @param redirectInfo pour transmettre des paramètres lors de la redirection
@@ -75,18 +75,18 @@ public class PatientController {
         }
         // RedirectAttributes permet de transmettre des informations lors d'une redirection,
         // Ici on transmet un message de succès ou d'erreur
-        // Ce message est accessible et affiché dans la vue 'afficheGalerie.html'
+        // Ce message est accessible et affiché dans la vue 'DonneesPatient.html'
         redirectInfo.addFlashAttribute("message", message);
         return "redirect:show"; // POST-Redirect-GET : on se redirige vers l'affichage de la liste		
     }
 
     /**
-     * Appelé par le lien 'Supprimer' dans 'afficheGaleries.html'
+     * Appelé par le lien 'Supprimer' dans 'DonnesPatient.html'
      *
      * @param patient à partir de l'id de la galerie transmis en paramètre, Spring fera une requête SQL SELECT pour
-     * chercher la galerie dans la base
+     * chercher le patient dans la base
      * @param redirectInfo pour transmettre des paramètres lors de la redirection
-     * @return une redirection vers l'affichage de la liste des galeries
+     * @return une redirection vers l'affichage de la liste des patients
      */
     @GetMapping(path = "delete")
     public String supprimeUneDonnéePuisMontreLaListe(@RequestParam("id") Patient patient, RedirectAttributes redirectInfo) {
@@ -99,7 +99,7 @@ public class PatientController {
         }
         // RedirectAttributes permet de transmettre des informations lors d'une redirection,
         // Ici on transmet un message de succès ou d'erreur
-        // Ce message est accessible et affiché dans la vue 'afficheGalerie.html'
+        // Ce message est accessible et affiché dans la vue 'DonneesMedecin.html'
         redirectInfo.addFlashAttribute("message", message);
         return "redirect:show"; // on se redirige vers l'affichage de la liste
     }
